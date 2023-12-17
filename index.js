@@ -1,9 +1,6 @@
-require("dotenv").config();
-const { Web3 } = require("web3");
+const web3 = require("./client");
 
 var url = `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`;
-
-const web3 = new Web3(url);
 
 const address = "0x00000000219ab540356cBB839Cbe05303d7705Fa";
 
@@ -33,7 +30,7 @@ async function connectToPrivateNetwork() {
   console.log(balanceInEther + " ether");
 }
 
-connectToPrivateNetwork();
+// connectToPrivateNetwork();
 
-// findAccountBalance(address);
+findAccountBalance(address);
 // createAccount();
